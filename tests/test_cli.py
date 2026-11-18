@@ -75,7 +75,7 @@ class CommandLineTests(unittest.TestCase):
             self.assertEqual(error, "")
             self.assertIn("Parsed instructions: 4", output)
             self.assertNotIn("load_const:", output)
-            self.assertFalse(target.exists())
+            self.assertEqual(target.stat().st_size, 24)
 
     def test_missing_input_file(self):
         """Report an input file that does not exist."""

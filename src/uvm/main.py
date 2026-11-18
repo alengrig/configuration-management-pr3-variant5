@@ -4,6 +4,7 @@ import argparse
 import sys
 from pathlib import Path
 
+from uvm.encoding import encode_program
 from uvm.instructions import parse_program
 
 
@@ -22,7 +23,7 @@ def parse_arguments(arguments=None):
         "--output",
         type=Path,
         required=True,
-        help="Path to the future binary output file",
+        help="Path to the binary output file",
     )
     parser.add_argument(
         "--test-mode",
@@ -49,12 +50,25 @@ def print_instructions(program):
         )
 
 
+def save_binary(program, source_path, output_path):
+    """Encode and write a binary program."""
+    if source_path.resolve() == output_path.resolve():
+        raise ValueError("Input and output paths must differ")
+
+    binary = encode_program(program)
+    output_path.parent.mkdir(parents=True, exist_ok=True)
+    output_path.write_bytes(binary)
+
+    return len(binary)
+
+
 def main(arguments=None):
-    """Run the first stage of the assembler."""
+    """Assemble JSON instructions into machine code."""
     config = parse_arguments(arguments)
 
     try:
         program = load_instructions(config.input)
+        size = save_binary(program, config.input, config.output)
     except (OSError, UnicodeError, ValueError) as error:
         print(f"Error: {error}", file=sys.stderr)
         return 1
@@ -64,8 +78,8 @@ def main(arguments=None):
     if config.test_mode:
         print_instructions(program)
 
-    print(f"Binary target: {config.output}")
-    print("Binary encoding will be added in stage 2.")
+    print(f"Binary created: {config.output}")
+    print(f"Binary size: {size} bytes")
     return 0
 
 
