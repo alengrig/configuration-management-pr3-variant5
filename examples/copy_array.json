@@ -1,0 +1,182 @@
+[
+  {
+    "op": "load_const",
+    "b": 17,
+    "c": 0
+  },
+  {
+    "op": "load_const",
+    "b": 512,
+    "c": 1
+  },
+  {
+    "op": "write_mem",
+    "b": 1,
+    "c": 0
+  },
+  {
+    "op": "load_const",
+    "b": 256,
+    "c": 0
+  },
+  {
+    "op": "load_const",
+    "b": 516,
+    "c": 1
+  },
+  {
+    "op": "write_mem",
+    "b": 1,
+    "c": 0
+  },
+  {
+    "op": "load_const",
+    "b": 65535,
+    "c": 0
+  },
+  {
+    "op": "load_const",
+    "b": 520,
+    "c": 1
+  },
+  {
+    "op": "write_mem",
+    "b": 1,
+    "c": 0
+  },
+  {
+    "op": "load_const",
+    "b": 123456789,
+    "c": 0
+  },
+  {
+    "op": "load_const",
+    "b": 524,
+    "c": 1
+  },
+  {
+    "op": "write_mem",
+    "b": 1,
+    "c": 0
+  },
+  {
+    "op": "load_const",
+    "b": 2882400001,
+    "c": 0
+  },
+  {
+    "op": "load_const",
+    "b": 528,
+    "c": 1
+  },
+  {
+    "op": "write_mem",
+    "b": 1,
+    "c": 0
+  },
+  {
+    "op": "load_const",
+    "b": 4294967295,
+    "c": 0
+  },
+  {
+    "op": "load_const",
+    "b": 532,
+    "c": 1
+  },
+  {
+    "op": "write_mem",
+    "b": 1,
+    "c": 0
+  },
+  {
+    "op": "read_mem",
+    "b": 2,
+    "c": 512
+  },
+  {
+    "op": "load_const",
+    "b": 1024,
+    "c": 3
+  },
+  {
+    "op": "write_mem",
+    "b": 3,
+    "c": 2
+  },
+  {
+    "op": "read_mem",
+    "b": 2,
+    "c": 516
+  },
+  {
+    "op": "load_const",
+    "b": 1028,
+    "c": 3
+  },
+  {
+    "op": "write_mem",
+    "b": 3,
+    "c": 2
+  },
+  {
+    "op": "read_mem",
+    "b": 2,
+    "c": 520
+  },
+  {
+    "op": "load_const",
+    "b": 1032,
+    "c": 3
+  },
+  {
+    "op": "write_mem",
+    "b": 3,
+    "c": 2
+  },
+  {
+    "op": "read_mem",
+    "b": 2,
+    "c": 524
+  },
+  {
+    "op": "load_const",
+    "b": 1036,
+    "c": 3
+  },
+  {
+    "op": "write_mem",
+    "b": 3,
+    "c": 2
+  },
+  {
+    "op": "read_mem",
+    "b": 2,
+    "c": 528
+  },
+  {
+    "op": "load_const",
+    "b": 1040,
+    "c": 3
+  },
+  {
+    "op": "write_mem",
+    "b": 3,
+    "c": 2
+  },
+  {
+    "op": "read_mem",
+    "b": 2,
+    "c": 532
+  },
+  {
+    "op": "load_const",
+    "b": 1044,
+    "c": 3
+  },
+  {
+    "op": "write_mem",
+    "b": 3,
+    "c": 2
+  }
+]
