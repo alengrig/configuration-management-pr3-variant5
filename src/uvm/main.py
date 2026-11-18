@@ -4,7 +4,7 @@ import argparse
 import sys
 from pathlib import Path
 
-from uvm.encoding import encode_program
+from uvm.encoding import encode_instruction, encode_program
 from uvm.instructions import parse_program
 
 
@@ -50,6 +50,13 @@ def print_instructions(program):
         )
 
 
+def print_binary_instructions(program):
+    """Display machine-code bytes for each instruction."""
+    for number, instruction in enumerate(program, start=1):
+        encoded = encode_instruction(instruction)
+        print(f"{number}. {instruction.operation}: {encoded.hex(' ')}")
+
+
 def save_binary(program, source_path, output_path):
     """Encode and write a binary program."""
     if source_path.resolve() == output_path.resolve():
@@ -77,6 +84,7 @@ def main(arguments=None):
 
     if config.test_mode:
         print_instructions(program)
+        print_binary_instructions(program)
 
     print(f"Binary created: {config.output}")
     print(f"Binary size: {size} bytes")

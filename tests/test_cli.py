@@ -59,6 +59,10 @@ class CommandLineTests(unittest.TestCase):
         self.assertIn("Parsed instructions: 4", output)
         self.assertIn("load_const: A=98, B=7, C=2", output)
         self.assertIn("bit_not: A=50, B=716, C=900", output)
+        self.assertIn("load_const: 62 07 00 00 00 02", output)
+        self.assertIn("read_mem: 7d 68 05 00 00 00", output)
+        self.assertIn("write_mem: 41 22 00 00 00 00", output)
+        self.assertIn("bit_not: 32 cc 82 70 00 00", output)
 
     def test_normal_mode(self):
         """Parse instructions without verbose output."""
