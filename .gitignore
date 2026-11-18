@@ -1,0 +1,25 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+
+# Virtual environment
+.venv/
+
+# Test and quality tools
+.pytest_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Generated results
+output/
+build/
+dist/
+
+# macOS
+.DS_Store
+
+# Editors
+.idea/
+.vscode/
